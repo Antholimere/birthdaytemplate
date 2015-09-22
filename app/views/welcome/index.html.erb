@@ -9,20 +9,14 @@
 
   }
 
-  .photobutton {
-  padding-top: 50px;
-  height:100%;
-  width:71%;
-  border-radius: 55%;
-  border-style: dotted;
-  }
-
-  .photobutton:hover {
-    box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.16), 0 2px 10px 0 rgba(0, 0, 0, 0.12)
+  .circle:hover {
+    box-shadow: 0 10px 20px 0 rgba(112, 149, 150, 1);
   }
 
   body {
    background-color:#b2cecf ;
+   -webkit-appearance:none;
+   outline: none;
   }
 
   .font-standard{
@@ -35,37 +29,133 @@
    margin: 10px;
   }
 
+  .circle {
+    border-radius: 50%;
+    -webkit-appearance:none;
+    outline: none;
+  }
+
+  .circle:active {
+    -webkit-appearance:none;
+    outline: none;
+  }
+
+  h1 {
+   font-family: 'Montserrat Alternates', sans-serif;
+   font-size: 40px;
+   line-height: 50px;
+   color:#174B6E;
+  }
+
+  h2 {
+   font-size: 30px;
+   font-family: 'Montserrat', sans-serif;
+   font-weight: 300;
+   line-height: 40px;
+  }
+
+  h3 {
+   font-size: 20px;
+   font-family: 'Montserrat', sans-serif;
+   font-weight: 200;
+   line-height: 30px;
+   color:#434545;
+  }
+  a {
+    -webkit-appearance:none;
+    outline: none;
+    color: none;
+  }
+
+
+
+  .selectx {
+    -webkit-appearance:none;
+    outline: none;
+  }
+
 </style>
 
 <div class="container">
+  <div class="row text-center">
+    <h1>Happy Birthday, Peppi!!</h1>
+    <h3> Deine Kinder wünschen Dir alles Gute...</h2>
+  </div>
   <div class="row">
     <div class="col col-md-4 col-styling">
       <div class="photobutton">
-        <h2>Name</h2>
+
+      <%= link_to "#myModalOne", :id => "play-video1", :class => "btn", "data-toggle" => "modal" do %>
+        <%= image_tag "sebs.png", class: "img-responsive circle"%>
+      <% end %>
+
       </div>
+
     </div>
+
     <div class="col col-md-4 col-styling">
       <div class="photobutton">
-        <h2>Name</h2>
-      </div>
+
+      <%= link_to "#myModalTwo", :id => "play-video2", :class => "btn", "data-toggle" => "modal" do %>
+        <%= image_tag "isi.png", class: "img-responsive circle"%>
+      <% end %>
+       </div>
     </div>
+
     <div class="col col-md-4 col-styling">
-      <div class="photobutton">
-        <h2>Name</h2>
+        <%= link_to "#myModalThree", :id => "play-video3", :class => "btn selectx", "data-toggle" => "modal" do %>
+        <%= image_tag "michi.png",class: "img-responsive circle"%>
+      <% end %>
+    </div>
+
+  </div>
+  <div class="row padded">
+<br><br><br><br>
+    <p class="font-standard">
+      Da wir dieses Jahr nicht bei dir sein koennen, schicken wir Dir unsere Wünsche und Grüsse per Internetz. Geniess dein Wochenende ohne Kinder und nimm uns in Gedanken mit - beim Spazieren, Kaffee trinke und Kuchen essen. Du bist immer für uns da wenn wir Hilfe brauchen - Danke, dass du da bist. Vergiss nie: Du bist unser HERO. Wir loven dich.
+    </p>
+  </div>
+</div>
+Ò
+<!-- Modal -->
+<div id="myModalOne" class="modal fade" role="dialog">
+  <div class="modal-dialog">
+    <!-- Modal content-->
+    <div class="modal-content">
+      <div class="modal-body" style="height:500px">
+        <iframe id="video1" width="100%" height="100%"
+          src="https://www.youtube.com/embed/HBWftQxW4dA?rel=0" frameborder="0">
+        </iframe>
       </div>
     </div>
   </div>
 </div>
 
 <!-- Modal -->
-<div class="modal fade" id="bday" tabindex="-1" role="modal">
-    <div class="modal">
-        <div class="modal-content">
-            <div class="modal-body" style="padding-bottom:40px">
-                <div>
-                    <iframe width="100%" height="350" src="https://www.youtube.com/watch?v=Nni0rTLg5B8"></iframe>
-                </div>
-            </div>
-        </div>
+<div id="myModalTwo" class="modal fade" role="dialog">
+  <div class="modal-dialog">
+    <!-- Modal content-->
+    <div class="modal-content">
+      <div class="modal-body" style="height:500px">
+        <iframe id="video2" width="100%" height="100%"
+          src="https://www.youtube.com/embed/tKhsNwVJ4FU?rel=0" frameborder="0">
+        </iframe>
+      </div>
     </div>
+  </div>
+</div>
+
+<div id="myModalThree" class="modal fade" role="dialog">
+  <div class="modal-dialog">
+    <!-- Modal content-->
+    <div class="modal-content">
+      <div class="modal-body" style="height:500px">
+        <iframe id="video3" width="100%" height="100%"
+          src="https://www.youtube.com/embed/eGUhXxtnBW4?rel=0" frameborder="0">
+        </iframe>
+      </div>
+
+    </div>
+
+  </div>
 </div>
